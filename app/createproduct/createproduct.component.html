@@ -1,0 +1,19 @@
+<div class="container">
+  <form [formGroup]="formData" (ngSubmit)="createProduct(formData.value)">
+    <div class="form-group">
+      <label for="productID">Product ID</label>
+      <input type="text" id="productID" class="form-control" formControlName="productId">
+    </div>
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input type="text" id="ProductName" class="form-control" formControlName="productName">
+    </div>
+    <div class="form-group">
+      <label for="productPrice">Price</label>
+      <input type="text" id="productPrice"  class="form-control" formControlName="productPrice">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Clear</button>
+  </form>
+  <h2 *ngIf="isAdded">{{ProductAddedStatus}}</h2>
+</div>
